@@ -50,7 +50,7 @@ def Cipher(b):
 		elif i == 'K':
 			list_cipher.append('M')
 		elif i == 'L':
-			list_cipher.append('J')
+			list_cipher.append('N')
 		elif i == 'M':
 			list_cipher.append('K')
 		elif i == 'N':
@@ -95,8 +95,12 @@ def Cipher(b):
 			list_cipher.append('c')	
 		elif i == 'g':
 			list_cipher.append('i')	
+		elif i == 'i':
+			list_cipher.append('g')	
 		elif i == 'h':
-			list_cipher.append('j')	
+			list_cipher.append('j')
+		elif i == 'j':
+			list_cipher.append('h')	
 		elif i == 'k':
 			list_cipher.append('m')	
 		elif i == 'l':
