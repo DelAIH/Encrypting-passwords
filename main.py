@@ -1,16 +1,31 @@
+from tkinter import* # модуль Tkinter
 import cipher # Модуль шифрования
 
-сhoice = int(input('Выберите шифрование или дешифрование 1/2 :'))
+def Main():
+	
+	window = Tk()
+	window.geometry('268x70')
+	window.title('DelAIH')
+	
+	def clicked():
+		password_cipher = ent.get()
+		password_encryption = cipher.Cipher(password_cipher) # шифруется пароль
+		ent2.insert(0, password_encryption)
+	  
+	lbl = Label(window, text="Пароль:", width=8)
+	ent = Entry(window, width = 20)
+	btn = Button(window, text = 'Ввод',width = 10,command = clicked, fg='white', bg='black')
+	ent2 = Entry(window, width = 20)
+	lbl2 = Label(window, text="Результат:", width=8)
 
-if сhoice == 1:
-	password = input('Введите пароль: ')
-	a = cipher.Cipher(password)
-	print('Результат шифрования: ', a)
+	lbl.grid(row=0, column=0)
+	ent.grid(row=0, column=1)
+	btn.grid(row=0, column=2)
+	ent2.grid(row=1, column=1)
+	lbl2.grid(row=1, column=0)
 
-elif сhoice == 2:
-	password = input('Введите пароль для дешифрования: ')
-	a = cipher.Cipher(password)
-	print('Результа дешифрования: ', a)
+	window.mainloop()
 
-else:
-	print('Введите повторно')
+
+if __name__ == "__main__":
+	Main()
