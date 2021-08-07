@@ -1,3 +1,3 @@
 # Encrypting-passwords
 Password encryption software
-Создаю программу для шифрования паролей и конечно расшифровки
+I create a program for encrypting passwords and, of course, decrypting
